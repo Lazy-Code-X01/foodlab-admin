@@ -26,7 +26,7 @@ export default function Page(): React.JSX.Element {
   const fetchVendors = React.useCallback(async () => {
     const token = localStorage.getItem('authToken');
     try {
-      const response = await fetch('http://localhost:5000/api/admin/getVendors', {
+      const response = await fetch('https://foodlab-server.onrender.com/api/admin/getVendors', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
